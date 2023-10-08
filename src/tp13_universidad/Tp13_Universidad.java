@@ -109,11 +109,10 @@ public class Tp13_Universidad {
       int dni=rs.getInt("dni");
        String apellido=rs.getString("apellido");
       String nombre= rs.getString("nombre");
-        LocalDate fechN=rs.getDate("fechaDeNacimiento").toLocalDate();
-        boolean estado=rs.getBoolean("estado");
-            System.out.println("-----------------------");
-            System.out.println("Dni"+dni);
-           System.out.println("apellido"+apellido);
+       boolean estado=rs.getBoolean("estado");
+       System.out.println("-----------------------");
+       System.out.println("Dni"+dni);
+       System.out.println("apellido"+apellido);
 
 
 
