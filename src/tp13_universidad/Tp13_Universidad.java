@@ -187,7 +187,7 @@ public class Tp13_Universidad {
 //            System.out.println("apellido"+apellido);
 //            System.out.println("fecha"+fechN.toString());
 //        
-//        
+//        saleo no sale
  //       }
         
         String sql= " DELETE FROM inscripcion WHERE nota = 8";
