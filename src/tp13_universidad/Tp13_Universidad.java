@@ -16,7 +16,7 @@ public class Tp13_Universidad {
             String URL = "jdbc:mariadb://localhost:3306/trabajo-practico13";
             String usuario = "root";
             String password = "";
-            Connection con = DriverManager.getConnection(URL, usuario, password);
+            Connection con = DriverManager.getConnection(URL,usuario,password);
 
 //    A)  INGRESAR 3 ALUMNOs  
 //        1)
@@ -158,21 +158,16 @@ public class Tp13_Universidad {
 //------------------------------------------------------------------------------
 // C DESINSCRIBIR UN ALUMNO DE UNA MATERIA
 
-<<<<<<< HEAD
-String sql= "insert into inscripcion (nota,idAlumno,idMateria) values(9,1,1)";
-PreparedStatement ps= con.prepareStatement(sql);
-int filas= ps.executeUpdate();
-if(filas>0) {
-    JOptionPane.showMessageDialog(null,"nota agregada");
-}
+
+//String sql= "insert into inscripcion (nota,idAlumno,idMateria) values(9,1,1)";
+//PreparedStatement ps= con.prepareStatement(sql);
+//int filas= ps.executeUpdate();
+//if(filas>0) {
+  //  JOptionPane.showMessageDialog(null,"nota agregada");
+//}
        
        
-       
-
-
-
-
-
+      
           
 
 //     OBTENER LOS DATOS DE LOS ALUMNOS ACTIVOS
@@ -193,9 +188,9 @@ if(filas>0) {
 //            System.out.println("fecha"+fechN.toString());
 //        
 //        
-//        }
-=======
-              String sql= " DELETE FROM inscripcion WHERE nota = 2";
+ //       }
+        
+        String sql= " DELETE FROM inscripcion WHERE nota = 2";
               PreparedStatement ps= con.prepareStatement(sql);
            int filas= ps.executeUpdate();
            if(filas>0){
@@ -205,11 +200,9 @@ if(filas>0) {
             JOptionPane.showMessageDialog(null, "Error de carga de base de datos " + ex.getMessage());
             }catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Error en la conexion" + ex.getMessage());
-}
+        }
     }
-}
-
->>>>>>> 3ba8a67cbf752fcbaf941a8304c1ec516ba428ae
+   }
         
 
      
