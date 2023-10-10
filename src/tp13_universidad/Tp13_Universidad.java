@@ -99,21 +99,31 @@ public class Tp13_Universidad {
 
 
 //D)LISTAR DATOS DE ALIMNOS CON CALIFICACIONES SUPERIORES A OCHO
+// REVISARRRRRRR
+
+// String sql="SELECT * FROM `alumno` INNER JOIN inscripcion WHERE inscripcion.nota>8";
+//        PreparedStatement ps=con.prepareStatement(sql);
+//        ResultSet rs=ps.executeQuery();
+//        while(rs.next()){
+//        int id=rs.getInt("idAlumno");
+//      int dni=rs.getInt("dni");
+//       String apellido=rs.getString("apellido");
+//      String nombre= rs.getString("nombre");
+//       boolean estado=rs.getBoolean("estado");
+//       System.out.println("-----------------------");
+//       System.out.println("Dni"+dni);
+//       System.out.println("apellido"+apellido);
 
 
- String sql="SELECT * FROM `alumno` INNER JOIN inscripcion WHERE inscripcion.nota>8";
-        PreparedStatement ps=con.prepareStatement(sql);
-        ResultSet rs=ps.executeQuery();
-        while(rs.next()){
-        int id=rs.getInt("idAlumno");
-      int dni=rs.getInt("dni");
-       String apellido=rs.getString("apellido");
-      String nombre= rs.getString("nombre");
-       boolean estado=rs.getBoolean("estado");
-       System.out.println("-----------------------");
-       System.out.println("Dni"+dni);
-       System.out.println("apellido"+apellido);
-
+String sql= "insert into inscripcion (nota,idAlumno,idMateria) values(9,1,1)";
+PreparedStatement ps= con.prepareStatement(sql);
+int filas= ps.executeUpdate();
+if(filas>0) {
+    JOptionPane.showMessageDialog(null,"nota agregada");
+}
+       
+       
+       
 
 
 
