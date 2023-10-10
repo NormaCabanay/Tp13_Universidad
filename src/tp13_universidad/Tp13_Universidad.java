@@ -13,7 +13,7 @@ public class Tp13_Universidad {
     public static void main(String[] args) {
         try {
             Class.forName("org.mariadb.jdbc.Driver");
-            String URL = "jdbc:mariadb://localhost:3306/trabajo-practico13";
+            String URL = "jdbc:mariadb://localhost:3308/trabajo_practico13";
             String usuario = "root";
             String password = "";
             Connection con = DriverManager.getConnection(URL,usuario,password);
@@ -44,7 +44,7 @@ public class Tp13_Universidad {
 //           if(filas>0){
 //           JOptionPane.showMessageDialog(null,"Alumno agregado");}
 //---------------------------------------------------------------------------------------------------------
-//     INSERTAR 4 MATERIAS
+     //INSERTAR 4 MATERIAS
 //            String sql = "INSERT INTO materia(nombre,año,estado)" + "VALUES('Matematica',2,true)";
 //            PreparedStatement ps = con.prepareStatement(sql); // debemos incrementar o cambiar nuestra variable ps si queremos agregar varios
 //            int fila = ps.executeUpdate(); // DEBEMOS INCREMENTAR - cambiar el nombre de mi variable fila si queremos agregar vario
@@ -68,7 +68,7 @@ public class Tp13_Universidad {
 //           int fila3 = ps3.executeUpdate();
 //            System.out.println("Materia agregada"+ fila3);
 //           JOptionPane.showMessageDialog (null,"materia agregada");
-//
+
 //----------------------------------------------------------------------------------------
 // ALUMNOS INSCRIPTOS EN DOS MATERIAS
 //           
@@ -190,12 +190,12 @@ public class Tp13_Universidad {
 //        
  //       }
         
-        String sql= " DELETE FROM inscripcion WHERE nota = 2";
+        String sql= " DELETE FROM inscripcion WHERE nota = 8";
               PreparedStatement ps= con.prepareStatement(sql);
            int filas= ps.executeUpdate();
            if(filas>0){
            JOptionPane.showMessageDialog(null,"Alumno Desaprobado");}
-        
+//        
         }catch (ClassNotFoundException ex) {
             JOptionPane.showMessageDialog(null, "Error de carga de base de datos " + ex.getMessage());
             }catch (SQLException ex) {
